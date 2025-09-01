@@ -1,0 +1,25 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: cleanup
+spec:
+  steps:
+    - name: cleanup
+      image: busybox
+      script: |
+        #!/bin/sh
+        echo "Cleaning up..."
+
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: run-nose-tests
+spec:
+  steps:
+    - name: test
+      image: python:3.9
+      script: |
+        #!/bin/sh
+        pip install nose
+        nosetests tests
