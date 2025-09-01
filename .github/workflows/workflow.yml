@@ -31,8 +31,8 @@ jobs:
         with:
           python-version: '3.x'
       - name: Install dependencies
-        run: |
-          pip install nose
-      - name: Run unit tests
-        run: |
-          nosetests tests
+  run: |
+    pip install nose
+- name: Run unit tests
+  run: |
+    nosetests tests
