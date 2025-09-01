@@ -1,6 +1,9 @@
+# Core dependencies
 flask
-flask-restx
+sqlalchemy
+flask_sqlalchemy
+
+# Testing & linting
 pytest
-factory_boy
-behave
-requests
+flake8
+faker
